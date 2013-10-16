@@ -1,0 +1,38 @@
+@import "colors";
+
+body {
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 12pt;
+  background: $dark-background-color;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 2.4em;
+  line-height: 1.3em;
+
+  .line {
+    display: block;
+  }
+
+  .primary {
+    color: $primary-color;
+  }
+  strong {
+    font-weight: bold;
+  }
+  em {
+    font-weight: normal;
+  }
+}
+
+small {
+  font-size: .9em;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    color: $primary-color;
+  }
+}

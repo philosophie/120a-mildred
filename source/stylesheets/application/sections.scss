@@ -1,0 +1,63 @@
+@import "colors";
+@import "compass/css3/transform";
+@import "compass/css3/border-radius";
+
+section.feature {
+  text-align: center;
+
+  .primary-icon {
+    margin-bottom: 70px;
+  }
+}
+
+section.intro {
+  .lead-in-fullscreen {
+    background: $dark-background-color;
+
+    .lead-in-container {
+      position: relative;
+      height: 100%;
+      .lead-in-contents {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        @include transform(translate(-50%, -50%));
+      }
+    }
+
+    h1 .line.secondary {
+      font-size: 1.1em;
+    }
+
+    .scroll-down {
+      margin-top: 60px;
+      small {
+        display: block;
+        margin-bottom: 6px;
+      }
+    }
+  }
+
+  .slideshow-fullscreen {
+    width: 100%;
+    height: 100%;
+    color: black;
+
+
+    // TODO other vendor prefixes...
+    -webkit-clip-path: circle(50%, 50%, 0%);
+
+    .slideshow-container {
+      position: relative;
+      height: 100%;
+      width: 100%;
+
+      .slideshow-contents {
+        height: 100%;
+        background-image: image-url("office1.jpg");
+        background-size: cover;
+      }
+    }
+
+  }
+}

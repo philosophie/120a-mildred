@@ -1,0 +1,1 @@
+require "frizz/middleman/tasks"
