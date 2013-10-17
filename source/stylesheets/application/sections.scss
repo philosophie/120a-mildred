@@ -1,6 +1,8 @@
 @import "colors";
+@import "media";
 @import "compass/css3/transform";
 @import "compass/css3/border-radius";
+@import "compass/css3/inline-block";
 
 section.feature {
   text-align: center;
@@ -10,19 +12,37 @@ section.feature {
   }
 }
 
+body.no-touch section.intro .lead-in-fullscreen .lead-in-container {
+  height: 100%;
+
+  .lead-in-contents {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    @include transform(translate(-50%, -50%));
+  }
+}
+
+body.touch section.intro .lead-in-fullscreen .lead-in-container {
+  padding-top: 100px;
+}
+
+body.no-touch section.intro .slideshow-fullscreen {
+  height: 100%;
+
+  -webkit-clip-path: circle(50%, 50%, 0%);
+  -moz-clip-path: circle(50%, 50%, 0%);
+  -ms-clip-path: circle(50%, 50%, 0%);
+  clip-path: circle(50%, 50%, 0%);
+}
+
 section.intro {
   .lead-in-fullscreen {
     background: $dark-background-color;
 
     .lead-in-container {
       position: relative;
-      height: 100%;
-      .lead-in-contents {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        @include transform(translate(-50%, -50%));
-      }
+      height: 500px;
     }
 
     h1 .line.secondary {
@@ -36,16 +56,23 @@ section.intro {
         margin-bottom: 6px;
       }
     }
+
+    @include media(huge) {
+      h1 {
+        font-size: 4em;
+      }
+    }
+
+    @include media(small) {
+      h1 {
+        font-size: 1.4em;
+      }
+    }
   }
 
   .slideshow-fullscreen {
     width: 100%;
-    height: 100%;
-    color: black;
-
-
-    // TODO other vendor prefixes...
-    -webkit-clip-path: circle(50%, 50%, 0%);
+    height: 500px;
 
     .slideshow-container {
       position: relative;
@@ -54,10 +81,138 @@ section.intro {
 
       .slideshow-contents {
         height: 100%;
-        background-image: image-url("office1.jpg");
-        background-size: cover;
+        text-align: left;
+
+        ul, li {
+          height: 100%;
+        }
+
+        li.slide-1 {
+          background-image: image-url("office1.jpg");
+          background-size: cover;
+
+          h1 {
+            position: absolute;
+            top: 100px;
+            left: 200px;
+
+            @include media(small) {
+              left: 40px;
+            }
+          }
+          h1 .primary {
+            color: #fff;
+          }
+          h1 .secondary {
+            color: $dark-background-color;
+          }
+        }
       }
     }
 
+  }
+}
+
+section.details {
+  background: $dark-background-color;
+  padding: 80px 0;
+
+  .contents {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .details-availability, .details-left, .details-right {
+    @include inline-block(top);
+  }
+
+  .details-availability {
+    text-align: center;
+    width: 34%;
+    padding-right: 70px;
+
+    .badge {
+      $size: 160px;
+      @include border-radius($size/2);
+      width: $size;
+      height: $size;
+      @include inline-block;
+      background: #2de2ad;
+      color: $dark-background-color;
+      font-weight: bold;
+      padding-top: 30px;
+      margin-bottom: 40px;
+
+      em {
+        text-transform: uppercase;
+        font-weight: normal;
+        display: block;
+      }
+
+      .icon {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .details-left {
+    width: 33%;
+    border-right: 1px solid $muted-color;
+    padding-right: 40px;
+  }
+
+  .details-right {
+    width: 33%;
+    padding-left: 40px;
+
+    p a {
+      font-weight: bold;
+      color: $primary-color;
+    }
+  }
+
+  @include media(medium) {
+    .details-availability, .details-left, .details-right {
+      width: 300px;
+      margin: 0 auto;
+      display: block;
+      padding-right: 0;
+      padding-left: 0;
+      border: none;
+      margin-top: 60px;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+section#map-canvas {
+  height: 500px;
+}
+
+section.photo-bar {
+  height: 150px;
+  width: 100%;
+  overflow: hidden;
+
+  ul {
+    width: 100000px;
+    li {
+      float: left;
+    }
+  }
+}
+
+footer {
+  padding: 60px 0 100px;
+  text-align: center;
+  background: $primary-color;
+  color: $on-primary-color;
+
+  h1 {
+    color: $on-primary-color;
+    font-weight: bold;
+    margin-bottom: 20px;
   }
 }

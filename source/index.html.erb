@@ -35,7 +35,16 @@
 
   <div class="js-fullscreen-slideshow slideshow-fullscreen">
     <div class="slideshow-container">
-      <article class="slideshow-contents"></article>
+      <article class="slideshow-contents">
+        <ul>
+          <li class="slide-1">
+            <h1>
+              <strong class="line primary">A pleasant</strong>
+              <strong class="line secondary">place to work</strong>
+            </h1>
+          </li>
+        </ul>
+      </article>
     </div>
   </div>
 
@@ -104,18 +113,76 @@
   </header>
 </section>
 
-<section style="background: red">
-  more here<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<section class="details">
+  <div class="contents">
+    <article class="details-availability">
+      <span class="badge">
+        Office
+        <em>Available</em>
+        <svg class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="80px" height="45px" viewBox="0 0 251 141" enable-background="new 0 0 251 141" xml:space="preserve">
+          <g>
+            <g>
+              <path fill="#202020" d="M225.9,0H25.1L0,50.357h10.04V141h70.28l10.04-45.321V50.357h120.48v45.321h10.04V50.357h7.53V141h12.55
+                V50.357H251L225.9,0z M67.77,130.929H22.59v-20.143h45.18V130.929z M67.77,100.714H22.59V80.571h45.18V100.714z M67.77,70.5H22.59
+                V50.357h45.18V70.5z"/>
+            </g>
+          </g>
+        </svg>
+      </span>
+      <a href="#" class="button grey">
+        Reserve the office
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="5.601px" height="10.822px" viewBox="0 0 5.601 10.822" enable-background="new 0 0 5.601 10.822" xml:space="preserve">
+          <g>
+            <path fill="#202020" d="M1.5,10.822L0,9.722l3.241-4.321L0,1.1L1.5,0l4.101,5.401L1.5,10.822z"></path>
+          </g>
+        </svg>
+      </a>
+    </article
+
+    ><article class="details-left">
+      <h2>Available On Site</h2>
+      <ul class="list">
+        <li>Vestibulum id ligula porta felis euismod semper.</li>
+        <li>Vestibulum id ligula porta felis euismod semper.</li>
+        <li>Vestibulum id ligula porta felis euismod semper.</li>
+        <li>Vestibulum id ligula porta felis euismod semper.</li>
+        <li>Vestibulum id ligula porta felis euismod semper.</li>
+      </ul>
+    </article
+
+    ><article class="details-right">
+      <h2>About Your Neighbor</h2>
+      <p><a href="http://gophilosophie.com" target="_blank">philosophie</a> practices agile development. We deploy small, dedicated teams to each project in order to maximize focus and efficiency. Our process is designed to limit client risk and improve product quality.</p>
+    </article>
+  </div>
 </section>
 
-<section style="background: blue">
-  more here<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<section id="map-canvas"></section>
+
+<section class="photo-bar">
+  <ul>
+    <li><%= image_tag "office1.jpg", height: 150 %></li>
+    <li><%= image_tag "office1.jpg", height: 150 %></li>
+    <li><%= image_tag "office1.jpg", height: 150 %></li>
+    <li><%= image_tag "office1.jpg", height: 150 %></li>
+    <li><%= image_tag "office1.jpg", height: 150 %></li>
+    <li><%= image_tag "office1.jpg", height: 150 %></li>
+    <li><%= image_tag "office1.jpg", height: 150 %></li>
+    <li><%= image_tag "office1.jpg", height: 150 %></li>
+    <li><%= image_tag "office1.jpg", height: 150 %></li>
+    <li><%= image_tag "office1.jpg", height: 150 %></li>
+  </ul>
 </section>
 
-<section style="background: green">
-  more here<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</section>
-
-<section style="background: pink">
-  more here<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</section>
+<footer>
+  <h1>Ready to go?</h1>
+  <a href="#" class="button pink">
+    Contact Us
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="5.601px" height="10.822px" viewBox="0 0 5.601 10.822" enable-background="new 0 0 5.601 10.822" xml:space="preserve">
+      <g>
+        <path fill="#202020" d="M1.5,10.822L0,9.722l3.241-4.321L0,1.1L1.5,0l4.101,5.401L1.5,10.822z"></path>
+      </g>
+    </svg>
+  </a>
+</footer>

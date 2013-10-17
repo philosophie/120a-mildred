@@ -1,0 +1,58 @@
+@import "colors";
+@import "compass/css3/border-radius";
+@import "compass/css3/inline-block";
+
+.button {
+  border: 2px solid $dark-background-color;
+  padding: 16px 40px;
+  color: $dark-background-color;
+  text-decoration: none;
+  font-size: 1.1em;
+  background: none;
+  @include border-radius(4px);
+  @include inline-block;
+
+  svg path {
+    fill: $dark-background-color;
+  }
+
+  &:visited {
+    color: $dark-background-color;
+  }
+
+  &:hover {
+    background: white;
+  }
+
+  &.grey {
+    color: $muted-color;
+    background: none;
+    border: 2px solid $muted-color;
+    svg path {
+      fill: $muted-color;
+    }
+    &:hover {
+      color: $primary-color;
+      svg path {
+        fill: $primary-color;
+      }
+    }
+  }
+
+  &.pink {
+    color: $on-primary-color;
+    border-color: $on-primary-color;
+    background: none;
+    svg path {
+      fill: $on-primary-color;
+    }
+
+    &:hover {
+      background: $on-primary-color;
+      color: $primary-color;
+      svg path {
+        fill: $primary-color;
+      }
+    }
+  }
+}

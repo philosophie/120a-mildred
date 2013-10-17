@@ -4,12 +4,13 @@ body {
   font-family: "Helvetica", "Arial", sans-serif;
   font-size: 12pt;
   background: $dark-background-color;
-  color: #ffffff;
+  color: #aaaaaa;
 }
 
 h1 {
   font-size: 2.4em;
   line-height: 1.3em;
+  color: #fff;
 
   .line {
     display: block;
@@ -32,7 +33,28 @@ small {
 
 a {
   text-decoration: none;
+  color: inherit;
+
   &:hover {
+    text-decoration: none;
     color: $primary-color;
+  }
+}
+
+p {
+  line-height: 1.4em;
+}
+
+h2 {
+  font-size: 1.6em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+ul.list {
+  list-style-type: disc;
+  margin-left: 20px;
+  li {
+    margin-bottom: 6px;
   }
 }
