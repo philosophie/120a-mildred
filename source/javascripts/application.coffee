@@ -119,6 +119,11 @@ initializeMap = ->
     center: philosophieLatLng
     zoom: 18
     mapTypeId: google.maps.MapTypeId.ROADMAP
+    scrollwheel: false
+    zoomControl: false
+    mapTypeControl: false
+    panControl: false
+    streetViewControl: false
     styles: [
       {
         "featureType": "road.local",
