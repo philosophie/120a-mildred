@@ -1,0 +1,3 @@
+environments:
+  production:
+    bucket: rent120.gophilosophie.com
