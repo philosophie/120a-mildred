@@ -57,12 +57,6 @@ section.intro {
       }
     }
 
-    @include media(huge) {
-      h1 {
-        font-size: 4em;
-      }
-    }
-
     @include media(small) {
       h1 {
         font-size: 1.4em;
