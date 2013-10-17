@@ -5,6 +5,7 @@ header {
   background: $dark-background-color;
   padding: 12px 20px;
   height: 46px;
+  z-index: 10000;
 
   .logo-shadow path, .logo-shadow polygon {
     fill: #2E2E2D;
