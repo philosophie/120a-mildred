@@ -4,14 +4,6 @@
 @import "compass/css3/border-radius";
 @import "compass/css3/inline-block";
 
-section.feature {
-  text-align: center;
-
-  .primary-icon {
-    margin-bottom: 70px;
-  }
-}
-
 body.no-touch section.intro .lead-in-fullscreen .lead-in-container {
   height: 100%;
 
@@ -25,6 +17,25 @@ body.no-touch section.intro .lead-in-fullscreen .lead-in-container {
 
 body.touch section.intro .lead-in-fullscreen .lead-in-container {
   padding-top: 100px;
+  @include media(small) {
+    padding: 40px 0;
+    height: auto;
+
+    .primary-icon {
+      margin-bottom: 30px;
+    }
+
+    .scroll-down {
+      display: none;
+    }
+  }
+}
+
+@include media(small) {
+  body.touch section.intro .slideshow-fullscreen,
+  body.touch section.intro .slideshow-fullscreen .slideshow-container {
+    height: 400px;
+  }
 }
 
 body.no-touch section.intro .slideshow-fullscreen {
@@ -37,6 +48,12 @@ body.no-touch section.intro .slideshow-fullscreen {
 }
 
 section.intro {
+  text-align: center;
+
+  .primary-icon {
+    margin-bottom: 70px;
+  }
+
   .lead-in-fullscreen {
     background: $dark-background-color;
 
@@ -92,6 +109,7 @@ section.intro {
 
             @include media(small) {
               left: 40px;
+              top: 30px;
             }
           }
           h1 .primary {
@@ -110,6 +128,10 @@ section.intro {
 section.details {
   background: $dark-background-color;
   padding: 80px 0 126px 0;
+
+  @include media(small) {
+    padding: 20px 0 46px;
+  }
 
   .contents {
     max-width: 960px;
@@ -173,7 +195,7 @@ section.details {
       padding-right: 0;
       padding-left: 0;
       border: none;
-      margin-top: 60px;
+      margin-top: 40px;
       &:first-child {
         margin-top: 0;
       }
@@ -183,6 +205,9 @@ section.details {
 
 section#map-canvas {
   height: 500px;
+  @include media(small) {
+    height: 200px;
+  }
 }
 
 section.photo-bar {
@@ -203,6 +228,10 @@ footer {
   text-align: center;
   background: $primary-color;
   color: $on-primary-color;
+
+  @include media(small) {
+    padding: 20px 0 35px;
+  }
 
   h1 {
     color: $on-primary-color;
